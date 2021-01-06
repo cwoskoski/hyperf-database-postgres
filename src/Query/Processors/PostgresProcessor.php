@@ -22,11 +22,9 @@ class PostgresProcessor extends Processor
      * @param array $results
      * @return array
      */
-    public function processColumnListing($results)
+    public function processColumnListing(array $results): array
     {
-        return array_map(function ($result) {
-            return ((object) $result)->column_name;
-        }, $results);
+        return array_map(static fn($result) => ((object) $result)->column_name, $results);
     }
 
     /**
@@ -35,10 +33,8 @@ class PostgresProcessor extends Processor
      * @param array $results
      * @return array
      */
-    public function processListing($results)
+    public function processListing(array $results): array
     {
-        return array_map(function ($result) {
-            return (array) $result;
-        }, $results);
+        return array_map(static fn($result) => (array) $result, $results);
     }
 }

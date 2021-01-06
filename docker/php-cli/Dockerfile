@@ -21,6 +21,15 @@ RUN set -xe && \
     docker-php-ext-enable swoole
 
 RUN set -xe && \
+    git clone https://github.com/swoole/ext-postgresql.git && \
+        cd ext-postgresql && \
+        phpize && \
+        ./configure && \
+        make && make install && \
+        cd .. && \
+        rm -fr ext-postgresql
+
+RUN set -xe && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 #RUN set -xe && \

@@ -20,13 +20,15 @@
     "php": ">=7.4",
     "ext-pdo": "*",
     "ext-swoole": ">=4.4",
+    "ext-swoole_postgresql": ">=4.5",
     "hyperf/database": "^2.1"
   },
   "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.9",
     "malukenho/docheader": "^0.1.6",
     "mockery/mockery": "^1.0",
     "phpunit/phpunit": "^9.4",
-    "friendsofphp/php-cs-fixer": "^2.9"
+    "swoole/ide-helper": "^4.6"
   },
   "config": {
     "sort-packages": true

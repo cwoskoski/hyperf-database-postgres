@@ -5,8 +5,8 @@ ENV SWOOLE_VERSION=4.5.9
 RUN set -xe && \
     apt-get update && \
     apt-get install -y $PHPIZE_DEPS libpq-dev netcat-traditional git openssl libssl-dev libcurl4-openssl-dev autoconf libzip-dev && \
-    docker-php-ext-install sockets exif zip && \
-    docker-php-ext-enable sockets exif zip
+    docker-php-ext-install sockets exif zip pdo_pgsql && \
+    docker-php-ext-enable sockets exif zip pdo_pgsql
 
 RUN set -xe && \
     curl -LO https://github.com/swoole/swoole-src/archive/v${SWOOLE_VERSION}.tar.gz && \

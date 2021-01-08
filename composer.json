@@ -21,7 +21,8 @@
     "ext-pdo": "*",
     "ext-swoole": ">=4.4",
     "ext-swoole_postgresql": ">=4.5",
-    "hyperf/database": "^2.1"
+    "hyperf/database": "^2.1",
+    "spatie/ray": "^1.1"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.9",
